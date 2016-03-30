@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 class InputTest{
 	public static void main(String[] args){
@@ -10,5 +11,12 @@ class InputTest{
 		int age = in.nextInt();
 		
 		System.out.println("Hello, " + name + ", your age is " + age + ".");
+		
+		Console cons = System.console();
+		String username = cons.readLine("User name: ");
+		char[] passwd =cons.readPassword("Password: ");
+		System.out.println(username);
+		System.out.println(passwd);
+		
 	}
 }
