@@ -1,4 +1,4 @@
-package equals;
+package com.colin;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -49,11 +49,11 @@ public class Employee{
 		Employee other = (Employee)otherObject;
 		
 		// test whether the fields have identical values
-		return Object.equals(name, other.name) && salary == other.salary && Object.equals(hireDay, other .hireDay);		
+		return Objects.equals(name, other.name) && salary == other.salary && Objects.equals(hireDay, other .hireDay);
 	}
 	
 	public int hashCode(){
-		return Object.hash(name, salary, hireDay);
+		return Objects.hash(name, salary, hireDay);
 	}
 	
 	public String toString(){

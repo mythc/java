@@ -1,4 +1,4 @@
-package equals;
+package com.colin;
 
 public class Manager extends Employee{
 	private double bonus;
