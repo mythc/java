@@ -18,7 +18,7 @@ public class CopyOfTest {
         System.out.println(Arrays.toString(b));
 
         System.out.println("The following call will generate an exception.");
-        b = (String[]) badCopyOf(b, 10);
+        System.out.println(badCopyOf(b, 10));
     }
 
     /**
@@ -27,9 +27,9 @@ public class CopyOfTest {
      *        newLength the new length
      *@return a larger array that contains all elements of a. However, the returned array has type Object[], not the same type as a
      */
-    public static Object badCopyOf(Object[] a, int newLenth){
+    public static Object badCopyOf(Object a, int newLenth){
         Object[] newArray = new Object[newLenth];
-        System.arraycopy(a, 0, newArray, 0, Math.min(a.length, newLenth));
+        System.arraycopy(a, 0, newArray, 0, Math.min(Array.getLength(a), newLenth));
         return newArray;
     }
 
